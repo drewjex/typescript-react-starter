@@ -1,0 +1,32 @@
+{
+  "name": "typescript-react-webpack-starter",
+  "version": "0.0.0",
+  "scripts": {
+    "prestart": "npm run build-dependencies",
+    "start": "webpack-dev-server --config webpack/src.config.js --content-base www/ --inline",
+    "build-dependencies": "webpack --config webpack/dependencies.config.js",
+    "build-src": "webpack --config webpack/src.config.js",
+    "build-production": "NODE_ENV='production' webpack -p --config webpack/dependencies.config.js && NODE_ENV='production' webpack -p --config webpack/src.config.js"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.2",
+    "@types/react-dom": "^0.14.18",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "css-loader": "^0.26.0",
+    "node-sass": "^4.3.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "tslint": "^4.0.2",
+    "tslint-eslint-rules": "^3.2.3",
+    "tslint-jsdoc-rules": "^0.1.2",
+    "tslint-loader": "^3.2.0",
+    "tslint-react": "^2.0.0",
+    "typescript": "^2.1.4",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
